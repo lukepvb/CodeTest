@@ -2,7 +2,7 @@ CREATE TABLE cheeses(
    id      INTEGER  NOT NULL PRIMARY KEY 
   ,name    VARCHAR(30) NOT NULL
   ,country VARCHAR(24)
-  ,price   NUMERIC NOT NULL
+  ,price   NUMERIC(5, 2) NOT NULL
 );
 INSERT INTO cheeses(id,name,country,price) VALUES (19058,'Bowland cheese','England',9.7);
 INSERT INTO cheeses(id,name,country,price) VALUES (19059,'Domiati',NULL,5.11);

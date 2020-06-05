@@ -9,15 +9,14 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// require routers
-// const router = require('./routes/api');
-
 // handle requests for static files
 app.use('/assets', express.static(path.resolve(__dirname, '../client/assets')));
 
-// define route handlers
+// require routers
+const cheeseRouter = require('./routes/api/cheeses');
 
-// app.use('/api', router);
+// define route handlers
+app.use('/api/zipcode', cheeseRouter);
 
 // respond with main app
 app.get('/', (req, res) =>
