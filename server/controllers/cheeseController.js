@@ -29,16 +29,22 @@ cheeseController.applyLocalDiscount = (req, res, next) => {
 
   // iterate over array of cheese objects,
   for (let i = 0; i < cheeses.length; i++) {
+    // pull out the price of each cheese object
     const price = cheeses[i].price;
 
+    // pull out the percent_discount from each cheese object
     const percent_discount = cheeses[i].percent_discount;
 
+    // apply discount to the original price to get discountedTotal
     const discountedTotal = ((100 - percent_discount) / 100) * price;
 
+    // set a key:value pair on each cheese object to store the discounted total, rounded to the nearest hundredth
     cheeses[i].discountedTotal = Math.round(100 * discountedTotal) / 100;
 
+    // calculate savings for a particular cheese based on the local discount
     const savings = price * (percent_discount / 100);
 
+    // set a key:value pair for the savings based on discount for each of the cheeses in a particular area code
     cheeses[i].savings = Math.round(100 * savings) / 100;
   }
   console.log('discounted cheeses, line 40 in cheeseController', cheeses);
