@@ -6,11 +6,12 @@ const router = express.Router();
 
 /* /api/cheeses/ route */
 
-router.get(
+router.post(
   '/',
   cheeseController.getAllCheeseByZip,
   cheeseController.applyLocalDiscount,
   (req, res) => {
+    console.log(res.locals.cheeses);
     res.status(200).json(res.locals.cheeses);
   }
 );

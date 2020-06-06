@@ -2,20 +2,37 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-family: '../assets/initial_assets/Cera Font/';
+}
+
 #root {
-  justify-content: center;
-  background-color: #ee8c1d;
   display: block;
+  justify-content: center;
   height: 100%;
   width: 100%;
 }
 
 .landing-page {
-  width: 100%;
-  height: 63rem;
+  text-align: center;
+  background-color: #ee8c1d;
+}
+
+.main-logo-container {
+  display: inline-block;
+  border: solid #faca66 0.5rem;
+  height: 30rem;
+  margin: 3rem;
+  border-radius: 5rem;
+  padding: 2rem;
 }
 
 .main-logo-landing {
-  width: auto;
-  height: auto;
+  width: 23rem;
+}
+
+.button-landing {
+  width: 13%;
+  height: 3rem;
+  margin-bottom: 4rem;
 }

@@ -47,7 +47,6 @@ cheeseController.applyLocalDiscount = (req, res, next) => {
     // set a key:value pair for the savings based on discount for each of the cheeses in a particular area code
     cheeses[i].savings = Math.round(100 * savings) / 100;
   }
-  console.log('discounted cheeses, line 40 in cheeseController', cheeses);
   return next();
 };
 
