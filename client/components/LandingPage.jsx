@@ -14,12 +14,12 @@ const LandingPage = (props) => {
       <div className="main-logo-container">
         <img src={MainLogo} className="main-logo-landing" />
       </div>
-      <h1>Your Local Purveryor of Fine Cheeses</h1>
-      <h4>Currently serving Los Angeles County!</h4>
-      <div>
-        <Button className="button-landing" onClick={handleClick}>
-          Get Started
-        </Button>
+      <div className="landing-page-type">
+        <h1>Your Local Purveryor of Fine Cheeses</h1>
+        <h3>Currently serving Los Angeles County!</h3>
+        <div className="button-landing">
+          <Button onClick={handleClick}>Get Started</Button>
+        </div>
       </div>
     </div>
   );

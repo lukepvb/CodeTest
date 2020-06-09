@@ -12,29 +12,24 @@ import Summary from './Summary';
 const App = (props) => {
   const [cheeses, setCheeses] = useState([]);
   const [basket, setBasket] = useState([]);
-  const [summary, setSummary] = useState([]);
-  const [checkout, setCheckout] = useState({});
 
+  // Update the state for cheeses available in a specific zipcode
   const handleCheeseData = (data) => {
     setCheeses(data);
   };
 
+  // Update state for adding a specific cheese to your basket - will be passed to Summary component
   const addToBasket = (id) => {
-    const basketArr = [...basket];
+    const basketArr = basket;
 
     for (let i = 0; i < cheeses.length; i++) {
       if (id == cheeses[i].cheese_id) {
         basketArr.push(cheeses[i]);
       }
     }
-
     setBasket(basketArr);
-    console.log(basket);
+    console.log('This is your basket, line 31 App.jsx', basketArr);
   };
-
-  // const handleCheckout = (basketData) => {
-  //   setCheckout(basketData);
-  // };
 
   return (
     <Router>
@@ -52,7 +47,6 @@ const App = (props) => {
             render={() => <CheeseBoard cheeses={cheeses} addToBasket={addToBasket} />}
           />
           <Route exact path="/summary" render={() => <Summary basket={basket} />} />
-          <Route exact path="/summary/checkout" render={() => <Checkout />} />
         </>
       </Switch>
     </Router>

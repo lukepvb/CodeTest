@@ -1,38 +1,62 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import BasketItem from './BasketItem';
 
 const Summary = (props) => {
   const { basket } = props;
-
   console.log(basket);
 
-  // THIS IS WHERE YOU LEFT OFF
-
-  const checkoutObj = {
-    customer_zip: null,
+  const summaryObj = {
+    zipcode: basket[0].zip,
     items: [],
-    basketTotal: 0,
-    salesTax: 0,
-    savings: 0,
+    originalTotal: 0,
+    afterDiscount: 0,
+    yourSavings: 0,
+    tax: 0,
+    finalTotal: 0,
   };
 
-  // iterate over the basket array
   for (let i = 0; i < basket.length; i++) {
-    // pull out the necessary data from the array of cheeses in your basket
-    const { name } = basket[i];
-    // check to see if the name exists in checkoutObj
-    if (!checkoutObj[name]) {
-      checkoutObj[name] = 1;
-    } else {
-      checkoutObj[name] += 1;
-    }
-    // If it doesnt, initialize it with a count of 1;
-    // if it does, increase the count of that particular cheese
+    const { zip, name, country, price, discountedTotal, savings } = basket[i];
+
+    summaryObj.items.push(
+      <BasketItem
+        key={i}
+        zip={zip}
+        name={name}
+        country={country}
+        price={price}
+        discountedTotal={discountedTotal}
+        savings={savings}
+      />
+    );
+
+    // calculate original price and totals and save them in a summaryObj
+    summaryObj['originalTotal'] += Number(price);
+    summaryObj['afterDiscount'] += discountedTotal;
+    summaryObj['yourSavings'] += savings;
   }
+
+  // calculate tax based on discounted total
+  const yourTax = summaryObj['afterDiscount'] * 0.1025;
+  summaryObj['tax'] = yourTax;
+
+  // calculate final total based on tax added to discounted total
+  summaryObj.finalTotal = summaryObj['afterDiscount'] + summaryObj['tax'];
+
+  console.log(summaryObj);
 
   return (
     <div>
-      <h1>This is your basket summary page</h1>
+      {summaryObj.items}
+      <h2>Original total => {summaryObj.originalTotal.toFixed(2)}</h2>
+      <h4 className="savings">Total Savings => {summaryObj.yourSavings.toFixed(2)}</h4>
+      <h3>Your Total after savings => {summaryObj.afterDiscount.toFixed(2)}</h3>
+      <h5> + tax ={summaryObj.tax.toFixed(2)}</h5>
+      <h1>
+        <strong>Total =</strong>
+        {summaryObj.finalTotal.toFixed(2)}
+      </h1>
     </div>
   );
 };

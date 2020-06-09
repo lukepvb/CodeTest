@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  background-color: #ee8c1d;
 }
 
 h1 {
@@ -15,7 +16,6 @@ h1 {
 
 .landing-page {
   text-align: center;
-  background-color: #ee8c1d;
 }
 
 .main-logo-container {
@@ -31,8 +31,7 @@ h1 {
   width: 23rem;
 }
 
-.button-landing {
-  width: 13%;
-  height: 3rem;
-  margin-bottom: 4rem;
+/* Any styling to do with money */
+.savings {
+  color: red;
 }
