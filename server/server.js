@@ -10,7 +10,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // handle requests for static files
-app.use('/assets', express.static(path.resolve(__dirname, '../client/assets')));
+app.use('/assets', express.static(path.resolve(__dirname, '../client/assets/')));
+app.use(
+  '/assets',
+  express.static(path.resolve(__dirname, '../client/assets/initial_assets/Design Elements/'))
+);
 
 // require routers
 const cheeseRouter = require('./routes/api/cheeses');

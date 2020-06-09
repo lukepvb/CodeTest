@@ -1,10 +1,37 @@
 * {
   box-sizing: border-box;
+  background-color: #ee8c1d;
+}
+
+h1 {
+  font-family: '../assets/initial_assets/Cera Font/';
 }
 
 #root {
-  width: 100%;
-  height: 100%;
-  justify-content: center;
   display: block;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.landing-page {
+  text-align: center;
+}
+
+.main-logo-container {
+  display: inline-block;
+  border: solid #faca66 0.5rem;
+  height: 30rem;
+  margin: 3rem;
+  border-radius: 5rem;
+  padding: 2rem;
+}
+
+.main-logo-landing {
+  width: 23rem;
+}
+
+/* Any styling to do with money */
+.savings {
+  color: red;
 }
