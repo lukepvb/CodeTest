@@ -48,7 +48,7 @@ const App = (props) => {
             path="/cheeseboard"
             render={() => <CheeseBoard count={count} cheeses={cheeses} addToBasket={addToBasket} />}
           />
-          <Route exact path="/summary" render={() => <Summary basket={basket} />} />
+          <Route exact path="/summary" render={() => <Summary count={count} basket={basket} />} />
         </>
       </Switch>
     </Router>

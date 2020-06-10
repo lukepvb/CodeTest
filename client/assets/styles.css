@@ -14,19 +14,25 @@
 
 .landing-page {
   text-align: center;
+  width: auto;
+}
+
+.landing-page-type {
+  text-align: center;
+  width: 100%;
 }
 
 .main-logo-container {
   display: inline-block;
   border: solid #faca66 0.5rem;
   height: 28rem;
-  margin: 3rem;
+  margin: 1rem;
   border-radius: 5rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 .main-logo-landing {
-  width: 23rem;
+  width: 24rem;
 }
 
 .landing-page-type h1 {
@@ -38,6 +44,10 @@
   box-shadow: 10px 10px 32px -13px rgba(114, 53, 3, 0.77);
   margin-left: 35%;
   margin-right: 35%;
+  font-family: 'Cera Pro';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 30pt;
 }
 
 .landing-page-type h1 {
@@ -49,10 +59,41 @@
   display: inline-block;
 }
 
+.landing-page-type h5 {
+  display: inline-block;
+  font-family: 'Cera Pro';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18pt;
+}
+
+.button-landing-div {
+  /* background-color: #211b1b; */
+  display: inline-block;
+  padding: 0.7%;
+  border-radius: 1rem;
+}
+
 #button-get-started {
   height: 45px;
-  margin-top: 1%;
   width: 200px;
+  font-family: 'Cera Pro';
+  font-weight: 900;
+  font-style: normal;
+  color: black;
+  font-size: 14pt;
+  background-color: #faca66;
+  -webkit-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  -moz-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+}
+
+#button-get-started:hover {
+  background-color: #efeff4;
+}
+
+#button-get-started:active {
+  background-color: #ee8c1d;
 }
 
 /* EnterZip component styling */
@@ -65,6 +106,10 @@
   margin-top: 7%;
 }
 
+.zip-page-logo-div {
+  text-align: center;
+}
+
 .logo-zipcode-page {
   display: inline-block;
 }
@@ -72,6 +117,9 @@
 #zip-header {
   margin: 2%;
   background-color: #faca66;
+  font-family: 'Cera Pro';
+  font-weight: normal;
+  font-style: normal;
 }
 
 .icon-down-div {
@@ -94,14 +142,32 @@ Input {
   font-size: x-large;
 }
 
-.button-zip-submit {
+.button-zip-submit-div {
   background-color: #faca66;
 }
 
-.button-zip-submit Button {
+#button-zip-submit {
   height: 45px;
   margin-top: 1%;
   width: 200px;
+  font-family: 'Cera Pro';
+  font-weight: 900;
+  font-style: normal;
+  font-size: 14pt;
+  color: black;
+  background-color: #ee8c1d;
+  border-style: none;
+  -webkit-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  -moz-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+}
+
+#button-zip-submit:hover {
+  background-color: #efeff4;
+}
+
+#button-zip-submit:active {
+  background-color: #ee8c1d;
 }
 
 .icon-cheese {
@@ -128,8 +194,7 @@ Input {
 }
 
 .your-cart-badge-div Button {
-  border: solid black;
-  margin-top: -9%;
+  border: solid #723503;
 }
 
 #cart-badge {
@@ -137,6 +202,17 @@ Input {
   background-color: transparent;
   color: #723503;
   margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+text {
+  font-family: 'Cera Pro';
+  font-weight: 900;
+  font-style: Bold;
+  font-size: 14pt;
+  color: #723503;
+  background-color: transparent;
+  margin-top: 0.5rem;
 }
 
 .enter-cheese-form {
@@ -159,7 +235,29 @@ Input {
 }
 
 #submit-button {
+  height: 45px;
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: auto;
+  font-family: 'Cera Pro';
+  font-weight: 900;
+  font-style: normal;
+  font-size: 14pt;
+  color: black;
+  background-color: #ee8c1d;
+  border-color: efeff4;
+  -webkit-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  -moz-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+}
+
+#submit-button:hover {
+  background-color: #efeff4;
+  border-color: #723503;
+}
+
+#submit-button:active {
+  background-color: #ee8c1d;
 }
 
 .dropdown-container {
@@ -167,20 +265,73 @@ Input {
   margin-bottom: 2rem;
 }
 
+#dropdown-toggle-button {
+  height: 45px;
+  margin-top: 0.5rem;
+  width: auto;
+  font-family: 'Cera Pro';
+  font-weight: 900;
+  font-style: normal;
+  font-size: 14pt;
+  color: black;
+  background-color: #ee8c1d;
+  border-color: efeff4;
+  -webkit-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  -moz-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+}
+
+#dropdown-toggle-button:hover {
+  background-color: #efeff4;
+  border-color: #723503;
+}
+
+#dropdown-toggle-button:active {
+  background-color: #ee8c1d;
+}
+
+#reset-button {
+  height: 45px;
+  width: auto;
+  font-family: 'Cera Pro';
+  font-weight: 900;
+  font-style: normal;
+  font-size: 14pt;
+  color: black;
+  background-color: #ee8c1d;
+  border-color: efeff4;
+  -webkit-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  -moz-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+}
+
+#reset-button:hover {
+  background-color: #efeff4;
+  border-color: #723503;
+}
+
+#reset-button:active {
+  background-color: #ee8c1d;
+}
+
 .cheese-render-container {
   display: inline-block;
   border: solid #723503;
+  background-color: #efeff4;
   border-radius: 15px;
   -webkit-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
   -moz-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
   box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
-  height: 34rem;
-  width: 45%;
+  height: 26rem;
+  width: 60%;
   overflow-y: scroll;
   padding: 1% 2%;
   margin-bottom: 2%;
 }
 
+.cheese-arr-div {
+  background-color: #efeff4;
+}
 .cheese-header {
   display: flex;
   width: max-content;
@@ -225,6 +376,11 @@ Input {
 }
 
 /* Individual Cheese slice component styling  */
+
+.cheese-slice-container {
+  background-color: #efeff4;
+}
+
 .cheese-slice {
   -webkit-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
   -moz-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
@@ -233,7 +389,6 @@ Input {
   border-radius: 3rem;
   margin-bottom: 2%;
   padding: 2% 2%;
-  background-color: #faca66;
 }
 
 div.cheese-slice {
@@ -252,43 +407,187 @@ div.cheese-slice {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faca66', endColorstr='#ee8c1d', GradientType=1 );
 }
 
+#add-to-basket-button {
+  font-family: 'Cera Pro';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 10pt;
+}
+
 #cheese-name {
   background-color: transparent;
   border-radius: 3rem 3rem 0 0;
+  font-family: 'Cera Pro';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 30pt;
 }
 
 #cheese-origin {
   background-color: transparent;
   border-radius: 1rem;
+  font-family: 'Cera Pro';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18pt;
 }
 
 #cheese-base-price {
   background-color: transparent;
   border-radius: 1rem;
+  font-family: 'Cera Pro';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14pt;
 }
 
 #cheese-discount-price {
   background-color: transparent;
   border-radius: 0 0 3rem 3rem;
+  font-family: 'Cera Pro';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18pt;
 }
 
 /* Summary component styling */
 
 .summary-div {
   text-align: center;
+  height: 80%;
 }
+
+.summary-matte {
+  display: inline-block;
+  border: solid #723503;
+  border-radius: 3rem;
+  background-color: #faca66;
+  width: 60%;
+  height: auto;
+  padding: 4% 4% 4% 4%;
+  margin: 5% 10%;
+  -webkit-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  -moz-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+}
+
 .summary-container {
   display: inline-block;
-  border: solid black;
+  border-radius: 3rem;
+  background-color: #efeff4;
+  padding: 3% 3%;
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  -moz-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+}
+
+.summary-header {
+  background-color: transparent;
+  font-size: 3rem;
+}
+
+.h1-summary {
+  background-color: #efeff4;
+  font-family: 'Cera Pro';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 30pt;
+  color: green;
+}
+
+.h2-summary {
+  background-color: #efeff4;
+  font-family: 'Cera Pro';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 24pt;
+}
+
+.h4-summary-savings {
+  color: red;
+  background-color: #efeff4;
+  font-family: 'Cera Pro';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 18pt;
+}
+
+.h5-summary {
+  background-color: #efeff4;
+  font-family: 'Cera Pro';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14pt;
+}
+
+.icon-down-summary {
+  background-color: #efeff4;
+  font-size: 75px;
+  color: #723503;
+  margin: 2% 2%;
+}
+
+/* BasketItem component styling (nested inside of Summary component */
+
+.basket-item-container {
   background-color: #efeff4;
 }
-/* Any styling to do with money */
-.savings {
+.basket-item {
+  background-color: #efeff4;
+
+  margin: 2% 2%;
+}
+
+.h3-basket {
+  background-color: transparent;
+  font-family: 'Cera Pro';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 30pt;
+}
+
+.h5-basket-country {
+  background-color: transparent;
+  color: #723503;
+  font-family: 'Cera Pro';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18pt;
+}
+
+.h5-basket-market-price {
+  background-color: transparent;
+  font-family: 'Cera Pro';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14pt;
+}
+
+.h5-basket-savings {
+  background-color: transparent;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 14pt;
   color: red;
 }
 
+.h5-basket-discount-total {
+  background-color: transparent;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 18pt;
+  color: green;
+}
+
+.plus-icon {
+  font-size: 3rem;
+  background-color: #efeff4;
+}
+
 /* @font-face */
-/* @font-face {
+@font-face {
   font-family: 'Cera Pro';
   src: url('./fonts/CeraPro-Regular.woff2') format('woff2'),
     url('./fonts/CeraPro-Regular.woff') format('woff');
@@ -394,4 +693,132 @@ div.cheese-slice {
   font-weight: normal;
   font-style: italic;
   font-display: swap;
-} */
+}
+
+/* Iphone styles */
+
+/* Portrait */
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .landing-page {
+    text-align: center;
+    width: auto;
+  }
+
+  .landing-page-type {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .main-logo-container {
+    display: inline-block;
+    border: solid #faca66 0.5rem;
+    height: 28rem;
+    margin: 1rem;
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+  }
+
+  .main-logo-landing {
+    width: 24rem;
+  }
+
+  .landing-page-type h1 {
+    background-color: #faca66;
+    margin-left: 4rem;
+    width: 100%;
+    padding: 1.3rem;
+    border-radius: 2rem 2rem;
+    -webkit-box-shadow: 10px 10px 32px -13px rgba(114, 53, 3, 0.77);
+    -moz-box-shadow: 10px 10px 32px -13px rgba(114, 53, 3, 0.77);
+    box-shadow: 10px 10px 32px -13px rgba(114, 53, 3, 0.77);
+    font-family: 'Cera Pro';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30pt;
+  }
+
+  .landing-page-type h5 {
+    margin-top: 1rem;
+    margin-left: 7.5rem;
+    background-color: transparent;
+  }
+
+  #button-get-started {
+    margin-top: 1rem;
+    margin-left: 5.5rem;
+    height: 55px;
+    width: 300px;
+  }
+
+  /* EnterZip component - iphone */
+
+  .enter-zipcode-page {
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+  }
+  .logo-zipcode-page {
+    display: inline-block;
+    width: 18rem;
+    margin-bottom: 3rem;
+  }
+
+  #zip-header {
+    margin-bottom: 0.6rem;
+  }
+
+  .icon-down-div {
+    margin-bottom: 1rem;
+  }
+
+  /* Cheeseboard component - iphone */
+  .cheese-render-container {
+    width: 90%;
+    height: 50%;
+    margin-top: -1rem;
+  }
+
+  text {
+    display: none;
+  }
+
+  #cart-count {
+    font-size: 0.7rem;
+  }
+
+  .cheese-search {
+    display: none;
+  }
+
+  #submit-button {
+    display: none;
+  }
+
+  #dropdown-toggle-button {
+    font-size: 0.75rem;
+  }
+
+  #reset-button {
+    font-size: 0.4rem;
+  }
+
+  #h4-or {
+    display: none;
+  }
+
+  /* Summary page for iphone */
+  .summary-matte {
+    width: 80%;
+    height: 20%;
+    border-radius: 1rem;
+  }
+
+  .summary-container {
+    width: 96%;
+    height: 100%;
+    border-radius: 1rem;
+  }
+}

@@ -6,7 +6,8 @@ const YourCartBadge = (props) => {
   return (
     <div className="your-cart-badge-div">
       <h1>
-        <Button onClick={props.goToBasket} color="light" solid>
+        <Button id="cart-count" onClick={props.goToBasket} color="light" solid>
+          <text>Your Basket</text>
           <FaShoppingBasket id="cart-badge" />
           <Badge color="primary">{props.count}</Badge>
         </Button>

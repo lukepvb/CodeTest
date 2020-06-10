@@ -35,12 +35,12 @@ module.exports = {
       },
 
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
         use: [
           {
             loader: 'url-loader',
             options: {
-              limit: 5000,
+              limit: 100000,
             },
           },
         ],
@@ -60,6 +60,6 @@ module.exports = {
   },
   resolve: {
     // Enable importing JS / JSX files without specifying their extension
-    extensions: ['.js', '.jsx', '.png'],
+    extensions: [' ', '.js', '.jsx', '.png'],
   },
 };

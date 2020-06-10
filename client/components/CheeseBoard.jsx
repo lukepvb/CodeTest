@@ -146,27 +146,26 @@ const CheeseBoard = (props) => {
               onChange={(e) => setInput(e.target.value)}
             />
             <Button id="submit-button" onClick={() => handleCheeseSearch(input)}>
-              Submit
+              SEARCH
             </Button>
           </FormGroup>
         </Form>
       </div>
-      <h4>or</h4>
+      <h4 id="h4-or">or</h4>
       <div className="dropdown-container">
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-          <DropdownToggle caret>Filter by Country</DropdownToggle>
+          <DropdownToggle id="dropdown-toggle-button" caret>
+            FILTER BY COUNTRY
+          </DropdownToggle>
           <DropdownMenu>{dropDownRender}</DropdownMenu>
         </Dropdown>
-        <Button onClick={() => reset()}>Reset</Button>
+        <Button id="reset-button" onClick={() => reset()}>
+          RESET FILTERS
+        </Button>
       </div>
 
       <div className="cheese-render-container">
-        <div>{cheeseArr}</div>
-      </div>
-      <div className="button-go-to-basket">
-        <Button onClick={goToBasket}>
-          View your <FaShoppingBasket className="icon-basket" />
-        </Button>
+        <div className="cheese-arr-div">{cheeseArr}</div>
       </div>
     </div>
   );

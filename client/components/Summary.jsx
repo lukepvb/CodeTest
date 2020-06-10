@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import React from 'react';
 import BasketItem from './BasketItem';
+import { FiArrowDownCircle } from 'react-icons/fi';
 
 const Summary = (props) => {
   const { basket } = props;
@@ -48,16 +48,23 @@ const Summary = (props) => {
 
   return (
     <div className="summary-div">
-      <div className="summary-container">
-        {summaryObj.items}
-        <h2>Original total => {summaryObj.originalTotal.toFixed(2)}</h2>
-        <h4 className="savings">Total Savings => {summaryObj.yourSavings.toFixed(2)}</h4>
-        <h3>Your Total after savings => {summaryObj.afterDiscount.toFixed(2)}</h3>
-        <h5> + tax ={summaryObj.tax.toFixed(2)}</h5>
-        <h1>
-          <strong>Total =</strong>
-          {summaryObj.finalTotal.toFixed(2)}
-        </h1>
+      <div className="summary-matte">
+        <div className="summary-container">
+          <h1 className="summary-header">Summary</h1>
+          <h5 className="h5-summary">{props.count} Items in Basket</h5>
+          {summaryObj.items}
+          <h2 className="h2-summary">Original total = ${summaryObj.originalTotal.toFixed(2)}</h2>
+          <h4 className="h4-summary-savings">
+            Total Savings = -${summaryObj.yourSavings.toFixed(2)}
+          </h4>
+          <h5 className="h5-summary"> + tax (10.25%) = ${summaryObj.tax.toFixed(2)}</h5>
+
+          <FiArrowDownCircle className="icon-down-summary" />
+
+          <h1 className="h1-summary">
+            <strong className="h1-summary">Total = </strong>${summaryObj.finalTotal.toFixed(2)}
+          </h1>
+        </div>
       </div>
     </div>
   );

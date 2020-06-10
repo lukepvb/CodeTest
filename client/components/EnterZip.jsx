@@ -51,6 +51,7 @@ const EnterZip = (props) => {
   return (
     <div className="enter-zipcode-page">
       <img src={LogoZipPage} className="logo-zipcode-page" />
+
       <h1 id="zip-header">Simply enter your zip code below</h1>
 
       <Form className="enter-zipcode-form-group">
@@ -68,9 +69,9 @@ const EnterZip = (props) => {
         <FiArrowDownCircle className="icon-down" />
       </div>
 
-      <div className="button-zip-submit">
-        <Button onClick={handleZipSubmit}>
-          Cut to the
+      <div className="button-zip-submit-div">
+        <Button id="button-zip-submit" onClick={handleZipSubmit}>
+          CUT TO THE
           <GiCheeseWedge className="icon-cheese" />
         </Button>
       </div>
