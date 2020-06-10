@@ -4,18 +4,19 @@ import {
   Button,
   Form,
   FormGroup,
-  Label,
   Input,
-  FormText,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
 import CheeseSlice from './CheeseSlice';
+import YourCartBadge from './YourCartBadge';
+import { FaShoppingBasket } from 'react-icons/fa';
 
 const CheeseBoard = (props) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [input, setInput] = useState('');
   const [cheeseRender, setCheeseRender] = useState([]);
 
   const toggle = () => setDropdownOpen((prevState) => !prevState);
@@ -29,17 +30,27 @@ const CheeseBoard = (props) => {
 
   const handleCountryFilter = (e) => {
     const originCountry = e.target.value;
-    console.log('line 35', cheeseArr);
     isSpecified = true;
     filterCheese(originCountry, isSpecified);
     setCheeseRender(cheeseArr);
   };
+
+  const handleCheeseSearch = (search) => {
+    console.log(search);
+    const userInput = search;
+
+    filterCheese(undefined, false, search);
+    setCheeseRender(cheeseArr);
+  };
   // create a function that filters the returned results based on name or country of origin
 
-  const filterCheese = (origin, flag) => {
+  const filterCheese = (origin = undefined, flag = false, cheese = undefined) => {
     cheeseArr = [];
     for (let i = 0; i < cheeses.length; i++) {
-      const { name, country, discountedTotal, cheese_id } = cheeses[i];
+      const { name, country, discountedTotal, cheese_id, price } = cheeses[i];
+
+      const discountPrice = Number(discountedTotal).toFixed(2);
+      const basePrice = Number(price).toFixed(2);
 
       // check to see if country is already in dropDownArr (if it is not, push it in)
 
@@ -52,27 +63,51 @@ const CheeseBoard = (props) => {
             key={i}
             name={name}
             country={country}
-            discountedTotal={discountedTotal}
+            discountedTotal={discountPrice}
+            price={basePrice}
             id={cheese_id}
             addToBasket={props.addToBasket}
           />
         );
-      } else if (!origin) {
+      } else if (!origin && !cheese) {
         cheeseArr.push(
           <CheeseSlice
             key={i}
             name={name}
             country={country}
-            discountedTotal={discountedTotal}
+            price={basePrice}
+            discountedTotal={discountPrice}
             id={cheese_id}
             addToBasket={props.addToBasket}
           />
         );
+      } else if (!origin && cheese) {
+        const cheeseLower = cheese.toLowerCase();
+        const nameLower = name.toLowerCase();
+
+        if (nameLower.includes(cheeseLower)) {
+          cheeseArr.push(
+            <CheeseSlice
+              key={i}
+              name={name}
+              country={country}
+              price={basePrice}
+              discountedTotal={discountPrice}
+              id={cheese_id}
+              addToBasket={props.addToBasket}
+            />
+          );
+        }
       }
     }
   };
 
   filterCheese();
+
+  const reset = () => {
+    filterCheese();
+    setCheeseRender(cheeseArr);
+  };
 
   const dropDownFilter = [...new Set(dropDownArr)];
 
@@ -96,13 +131,43 @@ const CheeseBoard = (props) => {
 
   return (
     <div className="cheese-board-page">
-      <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-        <DropdownToggle caret>Filter by Country</DropdownToggle>
-        <DropdownMenu>{dropDownRender}</DropdownMenu>
-      </Dropdown>
+      <div className="your-cart">
+        <YourCartBadge id="your-cart-badge" goToBasket={goToBasket} count={props.count} />
+      </div>
 
-      <div>{cheeseArr}</div>
-      <Button onClick={goToBasket}>Go to Basket</Button>
+      <div className="cheese-search">
+        <Form className="enter-cheese-form">
+          <FormGroup>
+            <Input
+              type="text"
+              name="cheese-search"
+              id="cheese-search"
+              placeholder="Enter cheese name..."
+              onChange={(e) => setInput(e.target.value)}
+            />
+            <Button id="submit-button" onClick={() => handleCheeseSearch(input)}>
+              Submit
+            </Button>
+          </FormGroup>
+        </Form>
+      </div>
+      <h4>or</h4>
+      <div className="dropdown-container">
+        <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+          <DropdownToggle caret>Filter by Country</DropdownToggle>
+          <DropdownMenu>{dropDownRender}</DropdownMenu>
+        </Dropdown>
+        <Button onClick={() => reset()}>Reset</Button>
+      </div>
+
+      <div className="cheese-render-container">
+        <div>{cheeseArr}</div>
+      </div>
+      <div className="button-go-to-basket">
+        <Button onClick={goToBasket}>
+          View your <FaShoppingBasket className="icon-basket" />
+        </Button>
+      </div>
     </div>
   );
 };

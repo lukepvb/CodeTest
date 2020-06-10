@@ -3,16 +3,14 @@
   background-color: #ee8c1d;
 }
 
-h1 {
-  font-family: '../assets/initial_assets/Cera Font/';
-}
-
 #root {
   display: block;
   justify-content: center;
   height: 100%;
   width: 100%;
 }
+
+/* landing component styling */
 
 .landing-page {
   text-align: center;
@@ -21,7 +19,7 @@ h1 {
 .main-logo-container {
   display: inline-block;
   border: solid #faca66 0.5rem;
-  height: 30rem;
+  height: 28rem;
   margin: 3rem;
   border-radius: 5rem;
   padding: 2rem;
@@ -31,7 +29,369 @@ h1 {
   width: 23rem;
 }
 
+.landing-page-type h1 {
+  background-color: #faca66;
+  padding: 1.3rem;
+  border-radius: 2rem 2rem;
+  -webkit-box-shadow: 10px 10px 32px -13px rgba(114, 53, 3, 0.77);
+  -moz-box-shadow: 10px 10px 32px -13px rgba(114, 53, 3, 0.77);
+  box-shadow: 10px 10px 32px -13px rgba(114, 53, 3, 0.77);
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.landing-page-type h1 {
+  margin-bottom: 1%;
+  border: solid #723503;
+}
+
+.landing-page-type h4 {
+  display: inline-block;
+}
+
+#button-get-started {
+  height: 45px;
+  margin-top: 1%;
+  width: 200px;
+}
+
+/* EnterZip component styling */
+.enter-zipcode-page {
+  text-align: center;
+  padding: 3% 3%;
+  background-color: #faca66;
+  border-style: solid none solid none;
+  border-color: #723503;
+  margin-top: 7%;
+}
+
+.logo-zipcode-page {
+  display: inline-block;
+}
+
+#zip-header {
+  margin: 2%;
+  background-color: #faca66;
+}
+
+.icon-down-div {
+  background-color: #faca66;
+}
+
+.icon-down {
+  font-size: 75px;
+  color: #723503;
+  background-color: #faca66;
+}
+
+.enter-zipcode-form-group {
+  display: inline-block;
+  background-color: #faca66;
+}
+
+Input {
+  text-align: center;
+  font-size: x-large;
+}
+
+.button-zip-submit {
+  background-color: #faca66;
+}
+
+.button-zip-submit Button {
+  height: 45px;
+  margin-top: 1%;
+  width: 200px;
+}
+
+.icon-cheese {
+  display: inline-block;
+  background-color: transparent;
+  font-size: 30px;
+  margin-left: 0.5rem;
+}
+
+/* Cheeseboard component styling - renders cheeses available within */
+.cheese-board-page {
+  text-align: center;
+  padding: 1.5% 1.5%;
+  height: 56rem;
+  background-color: #faca66;
+  border-style: solid none solid none;
+  border-color: #723503;
+  margin-top: 3%;
+}
+
+.your-cart-badge-div h1 {
+  text-align: right;
+  background-color: #faca66;
+}
+
+.your-cart-badge-div Button {
+  border: solid black;
+  margin-top: -9%;
+}
+
+#cart-badge {
+  font-size: 40px;
+  background-color: transparent;
+  color: #723503;
+  margin-right: 0.5rem;
+}
+
+.enter-cheese-form {
+  display: inline-block;
+  background-color: #faca66;
+}
+
+.cheese-board-page h4 {
+  background-color: #faca66;
+  margin-top: -1%;
+}
+
+.dropdown {
+  background-color: #faca66;
+  margin-bottom: 1%;
+}
+
+.form-group {
+  background-color: #faca66;
+}
+
+#submit-button {
+  margin-top: 0.5rem;
+}
+
+.dropdown-container {
+  background-color: #faca66;
+  margin-bottom: 2rem;
+}
+
+.cheese-render-container {
+  display: inline-block;
+  border: solid #723503;
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  -moz-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  height: 34rem;
+  width: 45%;
+  overflow-y: scroll;
+  padding: 1% 2%;
+  margin-bottom: 2%;
+}
+
+.cheese-header {
+  display: flex;
+  width: max-content;
+  background-color: #faca66;
+  margin-left: 42%;
+}
+
+.cheese-wedge {
+  background-color: transparent;
+  margin-right: 0.6rem;
+}
+
+.cheese-search {
+  background-color: #faca66;
+  margin-top: -4%;
+}
+
+.button-go-to-basket {
+  background-color: #faca66;
+  margin-top: -1.5%;
+}
+
+.button-go-to-basket Button {
+  height: 45px;
+  width: 200px;
+}
+
+.icon-basket-slice {
+  display: inline-block;
+  background-color: transparent;
+  font-size: 15px;
+  margin-left: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.icon-basket {
+  display: inline-block;
+  background-color: transparent;
+  font-size: 25px;
+  margin-left: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Individual Cheese slice component styling  */
+.cheese-slice {
+  -webkit-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  -moz-box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  box-shadow: 3px 4px 14px -4px rgba(114, 53, 3, 1);
+  border: solid #723503;
+  border-radius: 3rem;
+  margin-bottom: 2%;
+  padding: 2% 2%;
+  background-color: #faca66;
+}
+
+div.cheese-slice {
+  background: rgba(250, 202, 102, 1);
+  background: -moz-linear-gradient(left, rgba(250, 202, 102, 1) 0%, rgba(238, 140, 29, 1) 100%);
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(250, 202, 102, 1)),
+    color-stop(100%, rgba(238, 140, 29, 1))
+  );
+  background: -webkit-linear-gradient(left, rgba(250, 202, 102, 1) 0%, rgba(238, 140, 29, 1) 100%);
+  background: -o-linear-gradient(left, rgba(250, 202, 102, 1) 0%, rgba(238, 140, 29, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(250, 202, 102, 1) 0%, rgba(238, 140, 29, 1) 100%);
+  background: linear-gradient(to right, rgba(250, 202, 102, 1) 0%, rgba(238, 140, 29, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faca66', endColorstr='#ee8c1d', GradientType=1 );
+}
+
+#cheese-name {
+  background-color: transparent;
+  border-radius: 3rem 3rem 0 0;
+}
+
+#cheese-origin {
+  background-color: transparent;
+  border-radius: 1rem;
+}
+
+#cheese-base-price {
+  background-color: transparent;
+  border-radius: 1rem;
+}
+
+#cheese-discount-price {
+  background-color: transparent;
+  border-radius: 0 0 3rem 3rem;
+}
+
+/* Summary component styling */
+
+.summary-div {
+  text-align: center;
+}
+.summary-container {
+  display: inline-block;
+  border: solid black;
+  background-color: #efeff4;
+}
 /* Any styling to do with money */
 .savings {
   color: red;
 }
+
+/* @font-face */
+/* @font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-Regular.woff2') format('woff2'),
+    url('./fonts/CeraPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-Medium.woff2') format('woff2'),
+    url('./fonts/CeraPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-LightItalic.woff2') format('woff2'),
+    url('./fonts/CeraPro-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-Bold.woff2') format('woff2'),
+    url('./fonts/CeraPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-BoldItalic.woff2') format('woff2'),
+    url('./fonts/CeraPro-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-BlackItalic.woff2') format('woff2'),
+    url('./fonts/CeraPro-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-Light.woff2') format('woff2'),
+    url('./fonts/CeraPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-ThinItalic.woff2') format('woff2'),
+    url('./fonts/CeraPro-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-Thin.woff2') format('woff2'),
+    url('./fonts/CeraPro-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-MediumItalic.woff2') format('woff2'),
+    url('./fonts/CeraPro-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-Black.woff2') format('woff2'),
+    url('./fonts/CeraPro-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera Pro';
+  src: url('./fonts/CeraPro-Italic.woff2') format('woff2'),
+    url('./fonts/CeraPro-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+} */

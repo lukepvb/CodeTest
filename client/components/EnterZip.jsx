@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Input } from 'reactstrap';
+import LogoZipPage from '../assets/initial_assets/Design Elements/img/FFC_logo_2_dark';
+import { FiArrowDownCircle } from 'react-icons/fi';
+import { GiCheeseWedge } from 'react-icons/gi';
 
 const EnterZip = (props) => {
   // initialize state for zipcode that will be entered and the cheeses that we will store
@@ -47,9 +50,11 @@ const EnterZip = (props) => {
 
   return (
     <div className="enter-zipcode-page">
-      <Form>
+      <img src={LogoZipPage} className="logo-zipcode-page" />
+      <h1 id="zip-header">Simply enter your zip code below</h1>
+
+      <Form className="enter-zipcode-form-group">
         <FormGroup>
-          <Label for="zipcode">Enter Your Zip code</Label>
           <Input
             type="text"
             name="zipcode"
@@ -58,10 +63,17 @@ const EnterZip = (props) => {
             onChange={(e) => handleZipInput(e.target.value)}
           />
         </FormGroup>
-        <Button className="button-zip-submit" onClick={handleZipSubmit}>
-          Submit
-        </Button>
       </Form>
+      <div className="icon-down-div">
+        <FiArrowDownCircle className="icon-down" />
+      </div>
+
+      <div className="button-zip-submit">
+        <Button onClick={handleZipSubmit}>
+          Cut to the
+          <GiCheeseWedge className="icon-cheese" />
+        </Button>
+      </div>
     </div>
   );
 };

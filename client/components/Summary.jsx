@@ -47,16 +47,18 @@ const Summary = (props) => {
   console.log(summaryObj);
 
   return (
-    <div>
-      {summaryObj.items}
-      <h2>Original total => {summaryObj.originalTotal.toFixed(2)}</h2>
-      <h4 className="savings">Total Savings => {summaryObj.yourSavings.toFixed(2)}</h4>
-      <h3>Your Total after savings => {summaryObj.afterDiscount.toFixed(2)}</h3>
-      <h5> + tax ={summaryObj.tax.toFixed(2)}</h5>
-      <h1>
-        <strong>Total =</strong>
-        {summaryObj.finalTotal.toFixed(2)}
-      </h1>
+    <div className="summary-div">
+      <div className="summary-container">
+        {summaryObj.items}
+        <h2>Original total => {summaryObj.originalTotal.toFixed(2)}</h2>
+        <h4 className="savings">Total Savings => {summaryObj.yourSavings.toFixed(2)}</h4>
+        <h3>Your Total after savings => {summaryObj.afterDiscount.toFixed(2)}</h3>
+        <h5> + tax ={summaryObj.tax.toFixed(2)}</h5>
+        <h1>
+          <strong>Total =</strong>
+          {summaryObj.finalTotal.toFixed(2)}
+        </h1>
+      </div>
     </div>
   );
 };

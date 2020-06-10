@@ -12,6 +12,7 @@ import Summary from './Summary';
 const App = (props) => {
   const [cheeses, setCheeses] = useState([]);
   const [basket, setBasket] = useState([]);
+  const [count, setCount] = useState(0);
 
   // Update the state for cheeses available in a specific zipcode
   const handleCheeseData = (data) => {
@@ -28,6 +29,7 @@ const App = (props) => {
       }
     }
     setBasket(basketArr);
+    setCount(basketArr.length);
     console.log('This is your basket, line 31 App.jsx', basketArr);
   };
 
@@ -44,7 +46,7 @@ const App = (props) => {
           <Route
             exact
             path="/cheeseboard"
-            render={() => <CheeseBoard cheeses={cheeses} addToBasket={addToBasket} />}
+            render={() => <CheeseBoard count={count} cheeses={cheeses} addToBasket={addToBasket} />}
           />
           <Route exact path="/summary" render={() => <Summary basket={basket} />} />
         </>

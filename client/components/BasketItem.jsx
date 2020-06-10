@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import React from 'react';
+import { BsPlus } from 'react-icons/bs';
 
 const BasketItem = (props) => {
   return (
     <div>
       <h3>
-        {props.name},{' '}
+        {props.name}
         <div>
           <h5>{props.country}</h5>
         </div>
@@ -13,6 +13,7 @@ const BasketItem = (props) => {
       <h5>Base Price = $ {props.price}</h5>
       <h5>Local Savings = -$ {props.savings}</h5>
       <h5>Discount Total = $ {props.discountedTotal}</h5>
+      <BsPlus />
     </div>
   );
 };
